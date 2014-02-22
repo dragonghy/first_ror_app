@@ -12,7 +12,7 @@ describe "StaticPages" do
 #  end
 
   describe "Home Page" do
-    before { visit '/static_pages/home' }
+    before { visit home_path }
 
     it { should have_content('Sample App') }
     it { should_not have_title('| Home') }
@@ -20,14 +20,14 @@ describe "StaticPages" do
   end
 
   describe "Help Page" do
-    before { visit '/static_pages/help' }
+    before { visit help_path }
 
     it { should have_content('Help') } 
     it { should have_title('Huayang\'s First RoR App | Help') }
   end
 
   describe "About page" do
-    before { visit '/static_pages/about' }
+    before { visit about_path }
 
     it { should have_content('About Us') }
     it { should have_title('Huayang\'s First RoR App | About') }
